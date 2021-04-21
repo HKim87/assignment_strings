@@ -8,18 +8,18 @@ scoorder2 = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
 
-scorers = f'{scoorder1} {goal_0}, {scoorder2} {goal_1}'
+scorers = scoorder1 + " " + str(goal_0) + ', ' + scoorder2 + " " + str(goal_1)
 
 report = f'{scoorder1} scored in the {goal_0}nd minute\n{scoorder2} scored in the {goal_1}th minute'
 
 player = 'Ronald Koeman'
 first_name = player[0:player.find(' ')]
 
-last_name_len = len(player[player.find('K'):])
+last_name_len = len(player[player.find(' ')+1:])
 
-name_short = 'R. Koeman'
+name_short = first_name[0] + ". " + player[player.find(' ')+1:]
 chant_metspace = (first_name + '! ') * len(first_name)
 chant = chant_metspace.strip()
-good_chant = chant.endswith('!')
+good_chant = chant[-1] != " "
 
 
